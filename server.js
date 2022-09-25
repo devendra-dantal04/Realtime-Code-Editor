@@ -6,11 +6,11 @@ const app = express();
 const http = require('http');
 const ACTIONS = require("./src/Actions");
 
-app.use(express.static('build'));
+// app.use(express.static('build'));
 
-app.use((req,res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
-})
+// app.use((req,res) => {
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'))
+// })
 
 const server = http.createServer(app);
 const io = new Server(server);
